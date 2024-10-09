@@ -4,7 +4,6 @@ import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import Icon from '@mui/material/Icon';
 
 function ProjectRow() {
   const [items, setItems] = useState([]);    
@@ -64,13 +63,16 @@ function ProjectRow() {
   }, []);
     
   const listItems = items.map((item, index) => (
-    <Card key={index}  sx={{display: 'flex', flexDirection: 'row-reverse'}}>
+    <Card 
+      key={index}  
+      elevation={0}
+      sx={{display: 'flex', flexDirection: 'row-reverse'}}>
         <CardMedia
           component='img'
           image={item.image}
           alt={item.title}/>
         <CardContent>
-          <Typography gutterBottom variant='h5' component='div'>{item.title} <p disable={item.team}> Teams</p> </Typography>
+          <Typography variant='h5' component='div'> <a target='blank' href={item.respository}> {item.title} </a></Typography>
           <Typography variant='body2' sx={{ color: 'text.secondary' }}>
             {item.description}
           </Typography>

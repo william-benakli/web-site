@@ -2,10 +2,16 @@
     display: flex;
     flex-wrap: wrap-reverse;
     justify-content: space-around;
-    width: 100em;
 }
 
 .card-container div{
     margin: 20px;
-    border-radius: 5%;
+}
+
+@media (max-width: 1024px) {
+
+    .MuiCard-root{
+        flex-direction: column !important;
+    }
+
 }
