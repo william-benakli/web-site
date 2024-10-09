@@ -15,7 +15,7 @@ function Presentation() {
           display: 'flex', 
           flexDirection: 'row', 
           margin: '30px',
-          backgroundColor: isDarkMode ? theme.palette.grey[700] : theme.palette.background.paper,
+          backgroundColor: isDarkMode ? theme.palette.grey[800] : theme.palette.background.paper,
           color: isDarkMode ? '#fff' : '#000'
         }}>
       <CardMedia
