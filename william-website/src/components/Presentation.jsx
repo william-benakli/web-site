@@ -1,14 +1,23 @@
 import React from 'react';
 import { TypeAnimation } from 'react-type-animation';
-import { Card, CardMedia, CardContent, Typography } from '@mui/material';
+import { Card, CardMedia, CardContent, Typography, useMediaQuery, useTheme } from '@mui/material';
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 function Presentation() {
+  const isDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const theme = useTheme();
+
   return (
     <Card 
         className='card-formation' 
         elevation={0}
-        sx={{ display: 'flex', flexDirection: 'row', margin: '30px'}}>
+        sx={{ 
+          display: 'flex', 
+          flexDirection: 'row', 
+          margin: '30px',
+          backgroundColor: isDarkMode ? theme.palette.grey[700] : theme.palette.background.paper,
+          color: isDarkMode ? '#fff' : '#000'
+        }}>
       <CardMedia
         component='img'
         height="50"
@@ -39,7 +48,7 @@ function Presentation() {
         />
 
         </Typography>
-        <Typography variant='body2' sx={{ color: 'text.primary' }}>
+        <Typography variant='body2'>
             J'ai découvert ma vocation en m'initiant à la programmation à travers Minecraft en Java vers l'âge de 14ans. Ce fut un véritable coup de cœur, j'ai été fasciné par les possibilités créatives que la programmation offre. Pour approfondir mes connaissances, j'ai suivi un parcours scientifique qui m'a conduit à obtenir un master en informatique.
         </Typography>
         <br/>

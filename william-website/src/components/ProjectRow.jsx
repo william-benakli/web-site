@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import './ProjectRow.css';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
+import { Card, CardMedia, CardContent, Typography, useMediaQuery, useTheme} from '@mui/material';
 
 function ProjectRow() {
   const [items, setItems] = useState([]);    
+  const isDarkMode = useMediaQuery('(prefers-color-scheme: dark)');
+  const theme = useTheme();
 
   useEffect(() => {
     setItems(
@@ -66,14 +65,20 @@ function ProjectRow() {
     <Card 
       key={index}  
       elevation={0}
-      sx={{display: 'flex', flexDirection: item.reversed ? 'row' :'row-reverse' }}>
+      sx={{
+        display: 'flex', 
+        flexDirection: item.reversed ? 'row' :'row-reverse',         
+        backgroundColor: isDarkMode ? theme.palette.grey[800] : theme.palette.background.paper,
+        color: isDarkMode ? '#fff' : '#000' }}>
         <CardMedia
           component='img'
           image={item.image}
-          alt={item.title}/>
+          alt={item.title}
+          sx={{ maxHeight: '500px', maxWidth: '500px' }}
+          />
         <CardContent>
           <Typography variant='h5' component='div'> <a target='blank' href={item.respository}> {item.title} </a></Typography>
-          <Typography variant='body2' sx={{ color: 'text.secondary' }}>
+          <Typography variant='body2'>
             {item.description}
           </Typography>
             <p><b>Compétences aquises</b>: {item.skills.join(' · ')} </p>

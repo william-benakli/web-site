@@ -9,9 +9,7 @@
 }
 
 @media (max-width: 1024px) {
-
     .MuiCard-root{
         flex-direction: column !important;
     }
-
 }
