@@ -14,6 +14,14 @@ function Formation() {
         date="Avr. 2024 - Sept. 2024"
         activities=""
       />
+    <FormationCardContent
+        image="static/universit_paris_cit_logo.jpg"
+        altText="Université Paris Cité"
+        name="Etudiant tuteur chez Université Paris Cité"
+        degree="Au cours de mes études, notamment durant mon master, j'ai eu l'occasion de donner des séances de tutorat à raison de 2 heures par semaine. J'accompagnais des étudiants en licence dans la réalisation de leurs projets en informatique. Cela m'a permis d'expliquer et de simplifier divers concepts informatiques, tout en les aidant à résoudre les problèmes qu'ils rencontraient sur leurs projets. Cette expérience a été extrêmement enrichissante."
+        date="Sept. 2022 - Avr. 2024"
+        activities=""
+      />
         <FormationCardContent
         image="static/universit_paris_cit_logo.jpg"
         altText="Université Paris Cité"

@@ -16,7 +16,7 @@ function ProjectRow() {
           description :"Dans le cadre de mes études, nous avons développé un jeu en réseau intitulé CatchGhost. Ce projet académique avait pour objectif de mettre en pratique les concepts de programmation réseau et de communication entre machines. Nous avons suivi un protocole strict défini par nos enseignants, avec un serveur programmé en C et un client en Java.",          respository: 'https://github.com/william-benakli/pac-man',
           skills: [' C (langage de programmation)', 'Développement Java', 'Java Swing', 'Suite des protocoles Internet (TCP/IP)', 'Protocole TCP', 'Protocole UDP'],
           image: 'projects/images/ghost-lab-menu.png',
-          team: false
+          reversed: false
         },
         {
           title: 'Logiciel Fractal avec des threads - Project académique',
@@ -24,7 +24,7 @@ function ProjectRow() {
           respository: 'https://github.com/william-benakli/fractal-software-swing',
           skills: ['Multithreading', 'ForkJoinPool', 'Java', 'Concurrence', 'Java Swing'],
           image: 'projects/images/projet-fractal-menu.png',
-          team: false
+          reversed: true
         },
         {
           title: 'LearnDico - Projet académique',
@@ -32,7 +32,7 @@ function ProjectRow() {
           respository: 'https://github.com/william-benakli/pcm-projet-2022',
           skills: ['Kotlin', 'Fragment navigation' , 'JPA', 'API REST', 'Développement Android', 'Android Studio'],
           image: 'projects/images/learn-dico.png',
-          team: false
+          reversed: false
         },
         {
           title: 'IG-Energy - Projet académique',
@@ -40,7 +40,7 @@ function ProjectRow() {
           respository: 'https://github.com/william-benakli/ig-energy',
           skills: ['Java Swing',  'Java',  'Patrons de conception', 'Patron Observer', 'Logiciel', 'Swing', 'Architecture MVC'],
           image: 'projects/images/result-energy.gif',
-          team: false
+          reversed: true
         },
         {
           title: 'TrainGo - Projet académique',
@@ -48,7 +48,7 @@ function ProjectRow() {
           respository: 'https://github.com/william-benakli/gla-calcul-itineraire',
           skills: ['Java', 'Swing'],
           image: 'projects/images/train-go-menu.png',
-          team: true
+          reversed: false
         },
         {
           title: 'Discool - Projet académique',
@@ -56,7 +56,7 @@ function ProjectRow() {
           respository: 'https://github.com/william-benakli/discool',
           skills: ['Framework Spring', 'Spring Boot', 'Vaadin', 'Java', 'JPA DAO', 'GitHub'],
           image: 'projects/images/discool-menu.png',
-          team: true
+          reversed: true
         }
       ]
     )
@@ -66,7 +66,7 @@ function ProjectRow() {
     <Card 
       key={index}  
       elevation={0}
-      sx={{display: 'flex', flexDirection: 'row-reverse'}}>
+      sx={{display: 'flex', flexDirection: item.reversed ? 'row' :'row-reverse' }}>
         <CardMedia
           component='img'
           image={item.image}

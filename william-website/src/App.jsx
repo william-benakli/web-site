@@ -9,7 +9,7 @@ function App() {
     <div>
         <Divider>Présentation</Divider>
         <Presentation/>
-        <Divider>Formation</Divider>
+        <Divider>Formation et Experience</Divider>
         <Formation/>
         <Divider>Projets</Divider>
         <ProjectRow />
