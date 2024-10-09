@@ -10,7 +10,7 @@ function Formation() {
         image="static/amex.jpg"
         altText="American Express Global Business Travel"
         name="American Express Global Business Travel"
-        degree="Stage"
+        degree="Stage - Conception et développement d'un outil interne destiné à l'analyse des erreurs de facturation."
         date="Avr. 2024 - Sept. 2024"
         activities=""
       />
@@ -26,7 +26,7 @@ function Formation() {
         image="static/universit_paris_cit_logo.jpg"
         altText="Université Paris Cité"
         name="Université Paris Cité"
-        degree="Master en informatique"
+        degree="Master en informatique - Master Parcours Information et Mobilité : Programmations, Algorithmes pour Internet, Répartition et Systèmes"
         date="Sept. 2022 - Avr. 2024"
         activities="Salsa, photographie et vidéo"
       />
@@ -34,7 +34,7 @@ function Formation() {
         image="static/universit_paris_cit_logo.jpg"
         altText="Université Paris Cité"
         name="Université Paris Cité"
-        degree="License informatique générale"
+        degree="Licence informatique générale"
         date="Sept. 2019 - Juin. 2022"
         activities="Photographie"
       />
